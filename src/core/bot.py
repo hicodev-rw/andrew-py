@@ -36,12 +36,19 @@ class Bot:
         vllm_api_key = "mobile-edge-ai-lab-token-123"
 
         # Initialize core LangChain components
+        # self.llm = ChatOpenAI(
+        #     model=model_name,
+        #     temperature=temperature,
+        #     streaming=streaming,
+        #     openai_api_base=vllm_base_url,
+        #     openai_api_key=vllm_api_key,
+        # )
+        
         self.llm = ChatOpenAI(
             model=model_name,
             temperature=temperature,
             streaming=streaming,
-            openai_api_base=vllm_base_url,
-            openai_api_key=vllm_api_key,
+            openai_api_key=os.getenv("OPENAI_API_KEY"),
         )
 
         self.embeddings = OpenAIEmbeddings(
