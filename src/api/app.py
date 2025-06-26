@@ -36,7 +36,7 @@ def initialize_faq_bot():
         # Initialize the system with your existing code
         # faq_bot = Bot(model_name="ISTA-DASLab/gemma-3-4b-it-GPTQ-4b-128g", temperature=0.2, streaming=True)
         
-        faq_bot = Bot(model_name="gpt", temperature=0.2, streaming=True)
+        faq_bot = Bot(model_name="gpt-4", temperature=0.2, streaming=True)
 
 
         initialization_status = {
