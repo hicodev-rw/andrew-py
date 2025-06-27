@@ -12,12 +12,15 @@ from bs4 import BeautifulSoup
 from langchain.schema import Document
 from langchain_openai import OpenAIEmbeddings
 from tqdm import tqdm
+from dotenv import load_dotenv
 
 from src.core.store_manager import VectorStoreManager
 
 # Configure logging
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
+
+load_dotenv()
 
 # __________________________________________________________________________
 
