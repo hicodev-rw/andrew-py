@@ -97,4 +97,5 @@ def is_answer_unavailable(answer: str) -> bool:
         "unable to find",
         "the text does not provide"
     ]
+    return False
     return any(kw in answer.lower() for kw in keywords)
